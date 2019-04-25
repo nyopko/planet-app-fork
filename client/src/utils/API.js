@@ -30,6 +30,7 @@ export default {
 
 
   grabAPOD: function() {
+    console.log(process.env)
     console.log(neoURL);
     return axios.get(neoURL)
   },
