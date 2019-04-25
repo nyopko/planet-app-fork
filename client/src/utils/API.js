@@ -18,20 +18,15 @@ const imgURL = "https://images-api.nasa.gov/search?q="
 
 export default {
   grab: function() {
-    console.log(APIKEY);
-    console.log(apodURL);
    return axios.get(apodURL)
   },
 
   imgGet: function(query) {
-    console.log(imgURL);
     return axios.get(imgURL + query);
   },
 
 
   grabAPOD: function() {
-    console.log(process.env)
-    console.log(neoURL);
     return axios.get(neoURL)
   },
 
