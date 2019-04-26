@@ -59,12 +59,15 @@ class Nav extends Component {
             <div className="nav-wrapper">
                 <a href="/" className="brand-logo">Space App</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
+                    <div id="links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/media">Media</a></li>
                     <li><a href="/planets">Planets</a></li>
                     <li><a href="/rover">Rover</a></li>
                     <li><a href="/resources">Resources</a></li>
-                    {/* <li onClick={this.modalClick}>Login</li> */}
+                    <li><a href="/favorites">Favorites</a></li>
+                    <li onClick={this.modalClick}>Login</li>
+                    </div>
                 </ul>
             </div>
         </nav>

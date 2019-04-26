@@ -1,7 +1,12 @@
-.navbar{
+nav{
+    background-color:#220a29;
     width: 100%;
 }
 
-nav{
-    background-color:#390b47
+#nav-mobile{
+    margin-right: 10px;
+}
+
+.brand-logo{
+    margin-left: 15px;
 }

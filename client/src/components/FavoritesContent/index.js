@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-function MediaContent(props) {
+function FavoritesContent(props) {
     return (
-        <div className="mediaContent">
+        <div className="favoritesContent">
             <div className="row">
                 <div className="col s12">
                     <div className="card-panel">
@@ -12,13 +12,12 @@ function MediaContent(props) {
                             <img src={props.imgURL} alt="previewPic" className="previewPic" />
                             </div>
                             <div id="bodyText" className="col s8 m10">
-                            <h5>{props.title}</h5>
-                            <p>{props.info}</p>
-                            <a href={props.link}>Download Pictures/Videos</a>
+                            <h5>Props title will go here</h5>
+                            <p>Props info will go here</p>
+                            <a href="/home">Props download link will go here</a>
                             <br />
                             <br />
-                            <button id="favButton">Save to Favorites</button>
-                        </div>
+                            <button id="favButton">Remove from Favorites</button>                        </div>
                     </div>
                 </div>
             </div>
@@ -27,4 +26,4 @@ function MediaContent(props) {
     );
 }
 
-export default MediaContent;
+export default FavoritesContent;

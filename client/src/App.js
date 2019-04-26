@@ -17,6 +17,7 @@ import Rover from "./pages/Rover.js";
 import Hubble from "./pages/Hubble.js";
 import Media from "./pages/Media";
 import Resources from "./pages/Resources";
+import Favorites from "./pages/Favorites.js"
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             <Route exact path="/rover" component={Rover} />
             <Route exact path="/media" component={Media} />
             <Route exact path="/resources" component={Resources} />
+            <Route exact path="/favorites" component={Favorites} />
           </Switch>
           {/* <Footer /> */}
         </div>
