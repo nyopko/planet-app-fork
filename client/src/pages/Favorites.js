@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer';
+import FavoritesContent from '../components/FavoritesContent';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
               </div>
             </div>
           </div>
+      <FavoritesContent />
         </div>
       <Footer />
       </div>
