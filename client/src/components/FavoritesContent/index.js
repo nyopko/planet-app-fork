@@ -16,10 +16,8 @@ function FavoritesContent(props) {
                             <p>Props info will go here</p>
                             <a href="/home">Props download link will go here</a>
                             <br />
-                            {/* <button id="favButton">Test button here.</button>
                             <br />
-                            <img src={props.imgURL} alt="previewPic" className="previewPic" /> */}
-                        </div>
+                            <button id="favButton">Remove from Favorites</button>                        </div>
                     </div>
                 </div>
             </div>
