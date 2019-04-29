@@ -31,29 +31,31 @@ export default {
   },
 
   getUserInfo: function(login) {
+    console.log(login);
     if (!login){
       console.log("no login credentials provided");
     }
     else {
       axios.get("/api/users/get_user", {email: login.email}).then(data => {
-        var userLogIn = {};
-        if(data.password === login.password) {
-          userLogIn = {
-            userName: data.name,
-            userEmail: data.email,
+        console.log("login data: " + data);
+        if(data[0].password === login.password) {
+          let userLogIn = {
+            userName: data[0].name,
+            userEmail: data[0].email,
             isLoggedIn: true
           };
+          return userLogIn;
         }
   
         else {
-          userLogIn ={
+          let userLogIn ={
             userName: null,
             userEmail: null,
             isLoggedIn: false
           };
+          return userLogIn;
         }
 
-        return userLogIn;
       })
     }
     
