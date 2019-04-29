@@ -5,7 +5,7 @@ const path = require("path");
 
 const routes = require("./routes");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 //random comment 
@@ -13,7 +13,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname,'client/build')));
+app.use(express.static(path.join(__dirname,'client/public')));
 
 
 app.use(routes);

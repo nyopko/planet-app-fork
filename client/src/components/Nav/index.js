@@ -54,17 +54,19 @@ class Nav extends Component {
         }
 
         let checkLogin = app.getUser(login);
-        console.log(checkLogin.isLoggedIn)
+        console.log("is logged in: " + checkLogin.isLoggedIn)
 
     }
 
     handleInputChange = event => {
         const value = event.target.value;
         const name = event.target.name;
+
+        //console.log("value: "+ value + " name: " + name)
         this.setState({
             [name]: value
         });
-        console.log(this.state);
+        //console.log(this.state);
     };
 
     render(){
@@ -96,12 +98,12 @@ class Nav extends Component {
                      <div className="container">
                     <div className="input-field">
                         {/* <i class="material-icons prefix">person</i> */}
-                        <input type="text" id="email"/> {/* the "id" field may need to be changed to "name" in order for the setstate function to work properly */}
+                        <input onChange = {this.handleInputChange} type="text" name ="email"/> {/* the "id" field may need to be changed to "name" in order for the setstate function to work properly */}
                         <label htmlFor="email">Email</label>
                     </div><br/>
                     <div className="input-field">
                         {/* <i class="material-icons prefix">lock</i> */}
-                        <input type="password" id="pass"/>
+                        <input onChange = {this.handleInputChange} type="password" name ="password"/>
                         <label htmlFor="pass">Password</label>
                     </div><br/>
                     <div className="form-field">

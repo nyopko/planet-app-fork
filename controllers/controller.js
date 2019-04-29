@@ -35,7 +35,7 @@ module.exports = {
         })
         .then(data => {
             console.log(data);
-            res.json(data);
+            //res.json(data);
             return data;
         })
     },
