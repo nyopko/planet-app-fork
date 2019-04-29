@@ -3,7 +3,7 @@ import './style.css';
 
 function Mars() {
   return (
-    <div id="mars" className="row">
+    <div id="homeCard" className="row">
       <div className="col s12">
         <div className="card-panel">
           <div className="row">
