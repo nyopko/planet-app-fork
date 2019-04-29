@@ -35,7 +35,7 @@ export default {
       console.log("no login credentials provided");
     }
     else {
-      axios.get("/get_user", {email: login.email}).then(data => {
+      axios.get("/api/users/get_user", {email: login.email}).then(data => {
         var userLogIn = {};
         if(data.password === login.password) {
           userLogIn = {
@@ -43,8 +43,6 @@ export default {
             userEmail: data.email,
             isLoggedIn: true
           };
-  
-          return userLogIn;
         }
   
         else {
@@ -52,28 +50,28 @@ export default {
             userName: null,
             userEmail: null,
             isLoggedIn: false
-          }
-  
-          return userLogIn;
+          };
         }
+
+        return userLogIn;
       })
     }
     
   },
 
   newUser: function(userInfo) {
-    return axios.post("/new_user", userInfo);
+    return axios.post("/api/users/new_user", userInfo);
   },
 
   addFavorite: function(urlInfo) {
-    return axios.post("/add_url", urlInfo);
+    return axios.post("/api/users/add_url", urlInfo);
   },
 
   getUserFavorites: function(id) {
-    return axios.get("/"+id+"/favorites");
+    return axios.get("/api/users/"+id+"/favorites");
   },
 
   deleteFavorite: function(id, url) {
-    return axios.delete("/"+id+"/delete", {favUrl: url});
+    return axios.delete("/api/users/"+id+"/delete", {favUrl: url});
   }
 };

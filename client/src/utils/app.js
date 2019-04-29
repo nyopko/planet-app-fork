@@ -1,4 +1,4 @@
-import API from "./API";
+import API from "./API.js";
 
 let spaceApp = {
     newUser: userInfo => {
@@ -6,7 +6,7 @@ let spaceApp = {
             console.log(res);
             return res
         });
-        },
+    },
     
 
     newUrl: urlInfo => {
@@ -14,7 +14,7 @@ let spaceApp = {
             console.log(res);
             return res
         });
-        },
+    },
     
     
     getUserFavorites: user => {
@@ -22,14 +22,17 @@ let spaceApp = {
             console.log(res);
             return res
         });
-        },
+    },
     
 
     getUser: login => {
-        API.getUserInfo(login).then(res => {
-            console.log(res);
-        return res
-         })
+        let loginInfo = API.getUserInfo(login)
+        console.log(loginInfo);
+        return loginInfo;
+        // .then(res => {
+        //     console.log(res);
+        //return res
+        //})
     }
 
 }

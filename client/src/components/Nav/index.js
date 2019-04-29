@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./style.css";
 import Modal from 'react-modal';
+import app from '../../utils/app.js';
 
 const customStyles = {
     content: {
@@ -40,9 +41,21 @@ class Nav extends Component {
     
     }
     
-    modalClick=event=>{
+    modalClick = event => {
         event.preventDefault()
         this.openModal()
+    }
+
+    loginClick = event => {
+        event.preventDefault();
+        let login = {
+            email: this.state.email,
+            password: this.state.password
+        }
+
+        let checkLogin = app.getUser(login);
+        console.log(checkLogin.isLoggedIn)
+
     }
 
     handleInputChange = event => {
@@ -51,6 +64,7 @@ class Nav extends Component {
         this.setState({
             [name]: value
         });
+        console.log(this.state);
     };
 
     render(){
@@ -82,16 +96,16 @@ class Nav extends Component {
                      <div className="container">
                     <div className="input-field">
                         {/* <i class="material-icons prefix">person</i> */}
-                        <input type="text" id="username"/>
-                        <label for="username">Username</label>
+                        <input type="text" id="email"/> {/* the "id" field may need to be changed to "name" in order for the setstate function to work properly */}
+                        <label htmlFor="email">Email</label>
                     </div><br/>
                     <div className="input-field">
                         {/* <i class="material-icons prefix">lock</i> */}
                         <input type="password" id="pass"/>
-                        <label for="pass">Password</label>
+                        <label htmlFor="pass">Password</label>
                     </div><br/>
                     <div className="form-field">
-                        <button className="btn-large waves-effect waves-dark">Login</button>
+                        <button className="btn-large waves-effect waves-dark" id="btnLogin" onClick={this.loginClick}>Login</button>
                     </div>
                 </div>
                     <br/>
