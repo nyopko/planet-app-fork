@@ -1,6 +1,7 @@
 .planetPic{
     height: 585px;
     width: 1281px;
+    border:2px solid #021a40;
 }
 
 .PlanetContent {
