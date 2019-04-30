@@ -8,7 +8,7 @@ function Planets() {
         <div className="card-panel">
           <div className="row">
             <div className="col s4 m2">
-              <img id="homePlanet" src="https://i.ytimg.com/vi/libKVRa01L8/maxresdefault.jpg" alt="rover" className="responsive-img" />
+              <img id="homePlanet" src="https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/12/27/Photos/Processed/solarsystem-kQ6--621x414@LiveMint.jpg" alt="rover" className="responsive-img" />
             </div>
             <div id="planetText" className="col s8 m10">
               <h4>Our Solar System's Planets</h4>
