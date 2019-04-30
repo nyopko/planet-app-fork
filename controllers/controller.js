@@ -35,8 +35,8 @@ module.exports = {
         })
         .then(data => {
             console.log(data);
-            //res.json(data);
-            return data;
+            res.json(data);
+            //return data;
         })
     },
     findUrls: function(req, res){
