@@ -27,7 +27,7 @@ class App extends Component {
       <Router>
         <div>
           <Nav />
-          <PageBackground>
+          {/* <PageBackground> */}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/planets" component={Planets} />
@@ -38,7 +38,7 @@ class App extends Component {
             <Route exact path="/favorites" component={Favorites} />
           </Switch>
           {/* <Footer /> */}
-          </PageBackground>
+          {/* </PageBackground> */}
         </div>
       </Router>
     );
