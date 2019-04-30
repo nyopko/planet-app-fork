@@ -3,3 +3,9 @@
     margin-bottom: -20px;
     background-size: contain
 }
+
+
+.card-panel{
+    border-radius: 3px;
+    filter: drop-shadow(0 0 5px rgb(109, 13, 117));
+}
