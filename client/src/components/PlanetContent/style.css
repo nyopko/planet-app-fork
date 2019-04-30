@@ -13,10 +13,16 @@
 #modalPics{
     height: 300px;
     width: 350px;
-    box-shadow: none!important;
+    margin-left: 140px;
 }
 
 #planetCard{
     margin-top: -40px;
+}
+
+#planetName{
+    margin-top: -10px;
+    color: purple!important;
+    text-align: center;
 }
 
