@@ -27,7 +27,7 @@ let spaceApp = {
 
     getUser: login => {
         let loginInfo = API.getUserInfo(login)
-        console.log(loginInfo);
+        console.log("login info: " + loginInfo);
         return loginInfo;
         // .then(res => {
         //     console.log(res);

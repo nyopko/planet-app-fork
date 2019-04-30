@@ -36,8 +36,8 @@ export default {
       console.log("no login credentials provided");
     }
     else {
-      axios.get("/api/users/get_user", {email: login.email}).then(data => {
-        console.log("login data: " + data);
+      axios.get("https://localhost:3000/api/users/get_user", {email: login.email}).then(data => {
+        console.log(data);
         if(data[0].password === login.password) {
           let userLogIn = {
             userName: data[0].name,

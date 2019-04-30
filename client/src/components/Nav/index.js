@@ -54,7 +54,7 @@ class Nav extends Component {
         }
 
         let checkLogin = app.getUser(login);
-        console.log("is logged in: " + checkLogin.isLoggedIn)
+        console.log("is logged in: " + checkLogin) 
 
     }
 
