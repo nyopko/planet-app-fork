@@ -5,7 +5,6 @@ function SearchForm(props) {
     return (
         <div className="searchForm">
             <div className="col s4 m2">
-            <h5 id="introText">This search box will search NASA's image and video database and provide safe download links for content on your favorite planets and other space related fun! </h5>
             </div>
             <div className="row">
                 <div className="col s12 m9">
@@ -13,6 +12,7 @@ function SearchForm(props) {
                         <div className="col s12">
                         <div className="card-panel">
                             <div className="container">
+            <h5 id="introText">This search box will search NASA's image and video database and provide safe download links for content on your favorite planets and other space related fun! </h5>
                                 <form>
                                     <div className="input-group">
                                         <div className="input-field">
