@@ -15,7 +15,8 @@ const customStyles = {
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         width: '700px',
-        height: '550px'
+        height: '550px',
+        border:"1px solid grey",
     }
 };
 
@@ -100,14 +101,15 @@ class PlanetContent extends Component {
                     contentLabel="Details Modal"
                 >
 
-                    <h2 ref={subtitle => this.subtitle = subtitle}>{this.state.planet.name}</h2>
+                    <h2 id="planetName" ref={subtitle => this.subtitle = subtitle}>{this.state.planet.name}</h2>
                     <div><img id="modalPics" src={this.state.planet.image} alt="modalPics"></img></div>
-                    <div>Moons: {this.state.planet.moons}</div>
-                     <div>Revolution: {this.state.planet.revolution}</div>
-                    <div>Rotation: {this.state.planet.rotation}</div>
-                    <div>Diameter: {this.state.planet.diameter}</div>
-                    <div>Average temperature: {this.state.planet.average_temperature}</div>
-                    <div>Cool Facts: {this.state.planet.cool_facts}</div>
+                    <br />
+                    <div><b>Moons:</b> {this.state.planet.moons}</div>
+                    <div><b>Revolution:</b> {this.state.planet.revolution}</div>
+                    <div><b>Rotation:</b> {this.state.planet.rotation}</div>
+                    <div><b>Diameter:</b> {this.state.planet.diameter}</div>
+                    <div><b>Average temperature:</b> {this.state.planet.average_temperature}</div>
+                    <div><b>Fun Facts:</b> {this.state.planet.cool_facts}</div>
                     <br/>
                     <br/>
                     <button onClick={this.closeModal}>CLOSE</button>
